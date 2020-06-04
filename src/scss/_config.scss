@@ -1,0 +1,16 @@
+@import 'tokens';
+
+$colors: map-get($tokens, 'colors');
+$size-scale: map-get($tokens, 'size-scale');
+
+:root {
+
+  @each $color-name,
+  $color-value in $colors {
+    --color-#{$color-name}: #{$color-value};
+  }
+
+  @each $size in $size-scale {
+    #{'--size-' + nth($size, 1)}: #{nth($size, 2)};
+  }
+}

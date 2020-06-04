@@ -1,0 +1,9 @@
+colors:
+  primary: "#542bff"
+  background: "#f1f1f1"
+  body: "#333"
+size-scale:
+  sm: "0.8rem"
+  md: "1rem"
+  lg: "1.4rem"
+  xl: "2rem"

@@ -1,0 +1,27 @@
+{
+  "name": "tokens-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf _site/*",
+    "build": "npm run clean && eleventy",
+    "tokens:json": "yaml2json src/tokens/tokens.yaml > src/_data/tokens.json --pretty",
+    "json:scss": "json-to-scss src/_data/tokens.json src/scss/_tokens.scss",
+    "scss": "node-sass --output-style expanded -o src/_includes/css src/scss",
+    "watch:css": "onchange 'src/scss' -- npm run scss",
+    "serve": "eleventy --serve",
+    "start": "run-p tokens:json json:scss serve watch:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "json-to-scss": "^1.5.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "yamljs": "^0.3.0"
+  }
+}

@@ -1,0 +1,9 @@
+<section>
+<!-- Loop through JSON object -->
+{% for key, item in tokens.colors %}
+  <div class="color">
+    <p class="color-palette" style="background-color: {{ item }}"> Some space </p>
+    <p class="color-hex">{{ item }}</p>
+  </div>
+{% endfor %}
+</section>

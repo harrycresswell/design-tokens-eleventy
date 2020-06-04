@@ -1,0 +1,9 @@
+:root {
+  --color-primary: #542bff;
+  --color-background: #f1f1f1;
+  --color-body: #333;
+  --size-sm: 0.8rem;
+  --size-md: 1rem;
+  --size-lg: 1.4rem;
+  --size-xl: 2rem;
+}
